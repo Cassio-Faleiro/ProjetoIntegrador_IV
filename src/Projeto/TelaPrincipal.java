@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Atividade2 {
+public class TelaPrincipal {
 
     public static void main(String[] args) {
        menu();
