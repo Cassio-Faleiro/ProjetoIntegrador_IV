@@ -8,7 +8,7 @@ public class Pessoa {
     private String telefone;
     private String cpf;
     private String dataNascimento;
-
+    
     public int getCodigo() {
         return codigo;
     }
@@ -57,13 +57,17 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
     }
     
+    
+    //retorna lista de cadastrados
     @Override
     public String toString(){
         return "ID: "+codigo+""+
-                "\n" + "Nome Completo: "+nome+""+sobrenome+""+
-                "\n"+"Telefone: "+telefone+""+
-                "\n"+"CPG: "+cpf+""+
-                "\n"+"Data de Nacimento: "+dataNascimento; 
+                "\n"+"Nome Completo: "+nome+""+
+                    " "+sobrenome+""+
+                        "\n"+"Telefone: "+telefone+""+
+                            "\n"+"CPG: "+cpf+""+
+                                "\n"+"Data de Nacimento: "+dataNascimento+ 
+                                    "\n"+"---------------------------"+"\n";
     }
-    
 }
+

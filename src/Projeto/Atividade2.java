@@ -1,6 +1,5 @@
 package Projeto;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,11 +11,10 @@ public class Atividade2 {
     }
     
     public static void menu(){
-        Metodos metodo = new Metodos();
         Scanner sc = new Scanner(System.in);
-        Pessoa pessoa;
-        List<Pessoa> listaPessoa = new ArrayList<Pessoa>();
-        //boolean salvo;
+        //cria o a lista de cadastro
+        List<Pessoa> listarPessoa = new ArrayList<Pessoa>();
+        Pessoa pessoa;            
         
         Scanner dados1 = new Scanner(System.in);
         Scanner dados2 = new Scanner(System.in);
@@ -35,6 +33,7 @@ public class Atividade2 {
         int op = 0;
         
         do{       
+            pessoa = new Pessoa();
             System.out.println("----------MENU DE OPÇÕES----------");
             System.out.println("[1]-Cadastrar");
             System.out.println("[2]-Listar Cadastros");
@@ -44,9 +43,8 @@ public class Atividade2 {
             System.out.println("----------------------------------");
             System.out.print("Opção: ");
             op = new Integer(sc.nextLine());
-        if(op == 1){  
-                pessoa = new Pessoa();
-                
+        switch (op){  
+            case 1:                
                 System.out.print("Codigo: ");
                 codigo = dados1.nextInt();
                 pessoa.setCodigo(codigo);
@@ -70,18 +68,22 @@ public class Atividade2 {
                 System.out.print("Data de Nascimento: ");
                 dataNascimento = dados6.nextLine();
                 pessoa.setDataNascimento(dataNascimento);
-                listaPessoa.add(pessoa);
-                //salvo = metodo.addPessoa(pessoa);
+                listarPessoa.add(pessoa);
+                
+                //boolean salvo;
+                //salvo = listaPessoa(pessoa);
                 
                 //if(salvo){
-                //    System.out.println( pessoa.getNome() + " Salvo com sucesso");
-                //}           
-            }else if (op == 2){
-                    if(listaPessoa.isEmpty()){
+                  // System.out.println( pessoa.getNome() + " Salvo com sucesso");
+                //}
+                break;
+            case 2:
+                    if(listarPessoa.isEmpty()){
                         System.out.println("Não existe cadastro.");
                     }else{
-                        System.out.println(listaPessoa.toString());
+                        System.out.println(listarPessoa.toString());
                     }
+                    break;
                 }    
             }
         while(op != 0);   
