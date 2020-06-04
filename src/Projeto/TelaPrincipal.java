@@ -42,7 +42,7 @@ public class TelaPrincipal {
             System.out.println("[0]-Sair");
             System.out.println("----------------------------------");
             System.out.print("<===INFORME A OPÇÃO===> ");
-            
+
             op = new Integer(sc.nextLine());
             switch (op) {
                 case 1:
@@ -74,6 +74,7 @@ public class TelaPrincipal {
                     System.out.println("--------------------------");
                     System.out.print("Data de Nascimento: ");
                     dataNascimento = dados6.nextLine();
+                    
                     pessoa.setDataNascimento(dataNascimento);
                     listarPessoa.add(pessoa);
                     break;
@@ -87,24 +88,71 @@ public class TelaPrincipal {
                     }
                     break;
                 case 3:
-                    if(listarPessoa.size() >= 1){
+                    if (listarPessoa.size() >= 1) {
                         try {
-                            System.out.println("======Informe o codigo do cadastro a ser deletado======");
-                            int i = Integer.parseInt(sc.nextLine());     
+                            System.out.println("======Informe o índice do cadastro a ser deletado======");
+                            int i = Integer.parseInt(sc.nextLine());
                             listarPessoa.remove(i);
-                            System.out.println("Cadastro referente ao codigo " +codigo+ " deletado com sucesso!");
+                            System.out.println("Cadastro referente ao codigo " + codigo + " deletado com sucesso!");
                         } catch (Exception e) {
                             System.out.println("Não existe cadastro relacionado ao índice informado." + e);
-                        }                  
-                    }else{
+                        }
+                    } else {
                         System.out.println("--------------------------");
                         System.out.println("Não existe cadastro.");
                         System.out.println("--------------------------");
                     }
-                    break;                   
-            }
-        }while (op != 0);
-            sc.close();
-        }
+                    break;
+                case 4:
+                    if (listarPessoa.size() >= 1) {
+                        System.out.println("======Informe o índice do cadastro a ser deletado======");
+                        int i = Integer.parseInt(sc.nextLine());
+                        System.out.println("--------------------------");
+                        System.out.print("Editar Codigo: ");
+                        codigo = dados1.nextInt();
+                        pessoa.setCodigo(codigo);
 
+                        System.out.println("--------------------------");
+                        System.out.print("Editar Nome: ");
+                        nome = dados2.nextLine();
+                        pessoa.setNome(nome);
+
+                        System.out.println("--------------------------");
+                        System.out.print("Editar Sobrenome: ");
+                        sobrenome = dados3.nextLine();
+                        pessoa.setSobrenome(sobrenome);
+
+                        System.out.println("--------------------------");
+                        System.out.print("Editar Telefone: ");
+                        telefone = dados4.nextLine();
+                        pessoa.setTelefone(telefone);
+
+                        System.out.println("--------------------------");
+                        System.out.print("Editar CPF: ");
+                        cpf = dados5.nextLine();
+                        pessoa.setCpf(cpf);
+
+                        System.out.println("--------------------------");
+                        System.out.print("Editar Data de Nascimento: ");
+                        dataNascimento = dados6.nextLine();
+                        pessoa.setDataNascimento(dataNascimento);
+
+                        listarPessoa.set(i, pessoa);
+                        System.out.println("--------------------------");
+                        System.out.println("Casdatro Editado com Sucesso.");
+                    } else {
+                        System.out.println("--------------------------");
+                        System.out.println("Não existe cadastro.");
+                        System.out.println("--------------------------");
+                    }
+                    break;
+                default:
+                    System.out.println("--------------------------");
+                    System.out.println("Saiu ou opção inválida do menu.");
+                    System.out.println("--------------------------");
+            }
+        } while (op != 0);
+        sc.close();
     }
+
+}
