@@ -49,89 +49,88 @@ public class TelaPrincipal {
                     System.out.println("--------------------------");
                     System.out.print("Codigo: ");
                     codigo = dados1.nextInt();
-                    if(codigo == 0){
-                        while(codigo == 0){
+                    if (codigo == 0) {
+                        while (codigo == 0) {
                             System.out.println("--------------------------");
-                            System.out.print("ERRO, Campo deve ser maior que zero!"+"\n"+"Nome: ");
+                            System.out.print("ERRO, Campo deve ser maior que zero!" + "\n" + "Nome: ");
                             codigo = dados1.nextInt();
-                            pessoa.setCodigo(codigo);                         
+                            pessoa.setCodigo(codigo);
                         }
-                    }else{
+                    } else {
                         pessoa.setCodigo(codigo);
-                    }       
-                    
+                    }
+
                     System.out.println("--------------------------");
                     System.out.print("Nome: ");
                     nome = dados2.nextLine();
-                    if(nome.isEmpty()){
-                        while(nome.isEmpty()){
+                    if (nome.isEmpty()) {
+                        while (nome.isEmpty()) {
                             System.out.println("--------------------------");
-                            System.out.print("ERRO, Campo obrigatorio!"+"\n"+"Nome: ");
+                            System.out.print("ERRO, Campo obrigatorio!" + "\n" + "Nome: ");
                             nome = dados2.nextLine();
-                            pessoa.setNome(nome);                          
+                            pessoa.setNome(nome);
                         }
-                    }else{
-                       pessoa.setNome(nome);
-                    }                                        
+                    } else {
+                        pessoa.setNome(nome);
+                    }
 
                     System.out.println("--------------------------");
                     System.out.print("Sobrenome: ");
                     sobrenome = dados3.nextLine();
-                    if(sobrenome.isEmpty()){
-                        while(sobrenome.isEmpty()){
+                    if (sobrenome.isEmpty()) {
+                        while (sobrenome.isEmpty()) {
                             System.out.println("--------------------------");
-                            System.out.print("ERRO, Campo obrigatorio!"+"\n"+"Sobrenome: "); 
+                            System.out.print("ERRO, Campo obrigatorio!" + "\n" + "Sobrenome: ");
                             sobrenome = dados3.nextLine();
-                            pessoa.setSobrenome(sobrenome);                        
+                            pessoa.setSobrenome(sobrenome);
                         }
-                    }else{
+                    } else {
                         pessoa.setSobrenome(sobrenome);
-                    }    
+                    }
 
                     System.out.println("--------------------------");
                     System.out.print("Telefone: ");
-                    telefone = dados4.nextLine();                                       
-                    if(telefone.isEmpty()){
-                        while(telefone.isEmpty()){
+                    telefone = dados4.nextLine();
+                    if (telefone.isEmpty()) {
+                        while (telefone.isEmpty()) {
                             System.out.println("--------------------------");
-                            System.out.print("ERRO, Campo obrigatorio!"+"\n"+"Telefone: "); 
+                            System.out.print("ERRO, Campo obrigatorio!" + "\n" + "Telefone: ");
                             telefone = dados4.nextLine();
-                            pessoa.setTelefone(telefone);                        
+                            pessoa.setTelefone(telefone);
                         }
-                    }else{
+                    } else {
                         pessoa.setTelefone(telefone);
-                    }                  
+                    }
 
                     System.out.println("--------------------------");
                     System.out.print("CPF: ");
                     cpf = dados5.nextLine();
-                    if(cpf.isEmpty()){
-                        while(cpf.isEmpty()){
+                    if (cpf.isEmpty()) {
+                        while (cpf.isEmpty()) {
                             System.out.println("--------------------------");
-                            System.out.print("ERRO, Campo obrigatorio!"+"\n"+"CPF: "); 
+                            System.out.print("ERRO, Campo obrigatorio!" + "\n" + "CPF: ");
                             cpf = dados5.nextLine();
-                            pessoa.setCpf(cpf);                      
+                            pessoa.setCpf(cpf);
                         }
-                    }else{
-                        pessoa.setCpf(cpf);                      
-                    } 
-                    
+                    } else {
+                        pessoa.setCpf(cpf);
+                    }
 
                     System.out.println("--------------------------");
                     System.out.print("Data de Nascimento: ");
-                    dataNascimento = dados6.nextLine();                   
-                    if(dataNascimento.isEmpty()){
-                        while(dataNascimento.isEmpty()){
+                    dataNascimento = dados6.nextLine();
+                    if (dataNascimento.isEmpty()) {
+                        while (dataNascimento.isEmpty()) {
                             System.out.println("--------------------------");
-                            System.out.print("ERRO, Campo obrigatorio!"+"\n"+"Data Nascimento: "); 
-                            dataNascimento = dados6.nextLine();                   
-                            pessoa.setDataNascimento(dataNascimento);                      
+                            System.out.print("ERRO, Campo obrigatorio!" + "\n" + "Data Nascimento: ");
+                            dataNascimento = dados6.nextLine();
+                            pessoa.setDataNascimento(dataNascimento);
                         }
-                    }else{
-                        pessoa.setDataNascimento(dataNascimento);                      
+                    } else {
+                        pessoa.setDataNascimento(dataNascimento);
                     }
-                    
-                    listarPessoa.add(pessoa);                   
+
+                    listarPessoa.add(pessoa);
                     break;
                 case 2:
                     if (listarPessoa.isEmpty()) {
