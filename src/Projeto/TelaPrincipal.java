@@ -39,6 +39,7 @@ public class TelaPrincipal {
             System.out.println("[2]-Listar Cadastros");
             System.out.println("[3]-Deletar");
             System.out.println("[4]-Editar");
+            System.out.println("[5]-Total de Cadastros");
             System.out.println("[0]-Sair");
             System.out.println("----------------------------------");
             System.out.print("<===INFORME A OPÇÃO===> ");
@@ -194,6 +195,18 @@ public class TelaPrincipal {
                         listarPessoa.set(i, pessoa);
                         System.out.println("--------------------------");
                         System.out.println("Casdatro Editado com Sucesso.");
+                    } else {
+                        System.out.println("--------------------------");
+                        System.out.println("Não existe cadastro.");
+                        System.out.println("--------------------------");
+                    }
+                    break;
+                case 5:
+                    int total = listarPessoa.size();
+                    if (total > 0) {
+                        System.out.println("--------------------------");
+                        System.out.println("O total de pessoas cadastrada no sistema é: "+total);
+                        System.out.println("--------------------------");
                     } else {
                         System.out.println("--------------------------");
                         System.out.println("Não existe cadastro.");
